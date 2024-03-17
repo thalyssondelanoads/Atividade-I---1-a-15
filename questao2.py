@@ -1,7 +1,5 @@
 print('MMC de dois números\n--------------------')
-
-#Solicita os dados ao usuário
-valor_a = int(input('Digite o 1º valor: '))
+valor_a = int(input('Digite o 1º valor: ')) #Solicita os dados ao usuário
 valor_b = int(input('Digite o 2º valor: '))
 
 mmc = 1

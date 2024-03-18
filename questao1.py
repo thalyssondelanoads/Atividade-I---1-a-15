@@ -5,11 +5,11 @@ def main():
   n = '' 
   while n != 0: 
       n = int(input('Digite o número: '))
-      sequencia = 1
-      while sequencia <= n: 
-          if n % sequencia == 0:
-              print(f'{sequencia}')
-          sequencia += 1
+      Sequencia = 1
+      while Sequencia <= n: 
+          if n % Sequencia == 0:
+              print(f'{Sequencia}')
+          Sequencia += 1
   print('======= FINALIZADO =======')
 
 main()

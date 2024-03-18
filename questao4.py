@@ -6,7 +6,7 @@ def main():
   Sequencia = 0
   Resultado = 1
   while Resultado >= 1:
-      Resultado = n / 2
+      Resultado = N / 2
       N = Resultado
   print(f'_____________________\nÚltima divisão sucessiva por 2 realizada: {N}')
 

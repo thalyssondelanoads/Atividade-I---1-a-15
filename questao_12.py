@@ -13,7 +13,7 @@ def main():
 
   pontos_jogador_1 = 0
   pontos_jogador_2 = 0
-  while pontos_jogador_1 < 5 and pontos_jogador_2 < 5:
+  while pontos_jogador_1 < 21 and pontos_jogador_2 < 21:
     pontuador = int(input('Qual Jogador Pontuou na Rodada [ 1 ou 2 ] : '))
     
     if pontuador == 1:

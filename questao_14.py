@@ -8,7 +8,6 @@ def porcentagem(opiniao,serra,dilma,ciro,indeciso,outros,nulo):
   porcentagem_nulo = (nulo / total) * 100
   
   print(f"""======== RESULTADO DA PESQUISA ========
-  
   TOTAL ENTREVISTADOS = {total}
   Serra = {porcentagem_serra:.1f}%
   Dilma = {porcentagem_dilma:.1f}%

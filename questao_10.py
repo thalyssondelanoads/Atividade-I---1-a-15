@@ -23,7 +23,6 @@ def main():
     peso_malas = float()
 
     while numero_bilhete != 0:
-
         contador_pessoas += 1
         quantidade_malas_da_pessoa = int(input('Quantidade de Malas: '))
         peso_malas += quantidade_malas_da_pessoa * 10

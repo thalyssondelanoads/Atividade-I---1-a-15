@@ -1,55 +1,54 @@
 def main():
     print('-' * 33)
-    print('Teste de Combustivel e decolagem'.upper())
+    print('TESTE DE COMBUSTÍVEL E DECOLAGEM')
     print('-' * 33)
 
-    Litros = float(input('Quantidade de Litros de Combustível[L]: '))
-    while Litros < 10000:
+    litros = float(input('Quantidade de Litros de Combustível[L]: '))
+    while litros < 10000:
         print('Quantidade Inferior ao Necessário')
-        Litros = float(input('Quantidade de Litros de Combustível[L]: '))
+        litros = float(input('Quantidade de Litros de Combustível[L]: '))
 
-    Peso_Combustivel = Litros * 1.5
+    peso_combustivel = litros * 1.5
 
-    Total_Containers = abs(int(input('Quantidade Containers: ')))
-    Contador_Containers = 0
-    Peso_Total_Containers = 0
-    while Contador_Containers != Total_Containers:
-        Contador_Containers += 1
-        Peso_Total_Containers += float(input('Peso do Container[KG]: '))
+    total_containers = abs(int(input('Quantidade Containers: ')))
+    contador_containers = 0
+    peso_total_containers = 0
+    while contador_containers != total_containers:
+        contador_containers += 1
+        peso_total_containers += float(input('Peso do Container[KG]: '))
 
-    Numero_Bilhete = int(input('Número do Bilhete: '))
-    Contador_Malas = 0
-    Contador_Pessoas = 0
-    Peso_Malas = float()
+    numero_bilhete = int(input('Número do Bilhete: '))
+    contador_malas = 0
+    contador_pessoas = 0
+    peso_malas = float()
 
-    while Numero_Bilhete != 0:
+    while numero_bilhete != 0:
 
-        Contador_Pessoas += 1
-        Quantidade_Malas_Da_Pessoa = int(input('Quantidade de Malas: '))
-        Peso_Malas += Quantidade_Malas_Da_Pessoa * 10
-        Numero_Bilhete = int(input('Número do Bilhete: '))
+        contador_pessoas += 1
+        quantidade_malas_da_pessoa = int(input('Quantidade de Malas: '))
+        peso_malas += quantidade_malas_da_pessoa * 10
+        numero_bilhete = int(input('Número do Bilhete: '))
 
-    Peso_Total_Passageiros = Contador_Pessoas * 70
-    Peso_Passageiros_Malas = Peso_Total_Passageiros + Peso_Malas
+    peso_total_passageiros = contador_pessoas * 70
+    peso_passageiros_malas = peso_total_passageiros + peso_malas
 
-    Peso_Decolagem = Peso_Combustivel + Peso_Total_Containers + Peso_Passageiros_Malas
-    Possibilidade_Combustivel_Adicional = (500000 - Peso_Decolagem) / 1.5
+    peso_decolagem = peso_combustivel + peso_total_containers + peso_passageiros_malas
+    peso_extra = 500000 - peso_decolagem
 
-    if(Possibilidade_Combustivel_Adicional < 0):
-        Possibilidade_Combustivel_Adicional = 0
+    if(peso_extra < 0):
+        peso_extra = 0
 
     print(f"""
-Quantidade de Passageiros   : [{Contador_Pessoas}] Pessoa(s)
-Peso Total de Bagagens      : [{Peso_Malas:.2f}] Kg
-Peso dos Passageiros        : [{Peso_Total_Passageiros:.2f}] Kg
-Peso da Carga               : [{Peso_Total_Containers:.2f}] Kg
-Combustivel Extra           : [{Possibilidade_Combustivel_Adicional:.2f}] L
+Quantidade de Passageiros   : [{contador_pessoas}] Pessoa(s)
+Peso Total de Bagagens      : [{peso_malas:.2f}] Kg
+Peso dos Passageiros        : [{peso_total_passageiros:.2f}] Kg
+Peso da Carga               : [{peso_total_containers:.2f}] Kg
+Peso Livre                  : [{peso_extra:.2f}] Kg
     """)
 
-    if Peso_Decolagem <= 500000:
+    if peso_decolagem <= 500000:
         print('-------[DECOLAGEM AUTORIZADA!]-------')
     else:
         print('-------[DECOLAGEM NÃO AUTORIZADA!]-------')
-
 
 main()

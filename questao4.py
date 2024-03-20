@@ -1,7 +1,7 @@
 def main():
   print('Divisões sucessivas por 2')
   print('>> Até a divisão ser menor que 1\n------------------')
-  n = int(input('Número: '))
+  n = float(input('Número: '))
 
   sequencia = 0
   resultado = 1
